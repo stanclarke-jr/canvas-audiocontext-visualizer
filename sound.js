@@ -70,7 +70,7 @@ async function getAudio() {
   const source = audioCtx.createMediaStreamSource(stream);
   source.connect(analyser);
   // How much data to collect
-  analyser.fftSize = 2 ** 9;
+  analyser.fftSize = 2 ** 8;
   analyser.smoothingTimeConstant = 0.9;
   // How may pieces of data exist?
   bufferLength = analyser.frequencyBinCount;
